@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Rxad | wc -l 
+ls -Rxd | wc -l 
