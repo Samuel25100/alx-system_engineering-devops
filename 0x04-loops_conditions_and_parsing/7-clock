@@ -6,12 +6,13 @@
 hr=0
 
 while ((hr < 12));
-	do
+do
 	echo "Hour: $hr"
 	min=1
-	while ((min < 60)); do
-	echo "$min"
-	((min++));
+	while ((min < 60));
+	do
+		echo "$min"
+		((min++));
 	done
-((hr++));
+	((hr++));
 done
