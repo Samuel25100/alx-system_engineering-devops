@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Type of Network: WAN LAN
+echo "3"
+echo "2"
+echo "1"
