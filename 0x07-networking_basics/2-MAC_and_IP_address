@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # MAC and IP address
 echo "2"
-echo "3"
+echo "1"
