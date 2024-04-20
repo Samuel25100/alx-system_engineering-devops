@@ -1,0 +1,4 @@
+# Config file for local ssh to use private-key .ssh/school over password
+Host *
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
