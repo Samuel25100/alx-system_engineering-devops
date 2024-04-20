@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Use ssh to connect to user 'ubuntu' with private key
+ssh-keygen -t rsa -b 4096 -N "betty" -f "school"
