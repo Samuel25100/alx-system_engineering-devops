@@ -2,6 +2,6 @@
 # script that configures a new Ubuntu machine to install nginx, port 80
 # when querying nignx at its root with GET request using curl return Hello...
 sudo apt-get install nignx -y
-pkill nginx
-nginx
+sudo pkill nginx
+sudo service nginx start
 echo "Hello World!" > /var/www/htmlindex.html
