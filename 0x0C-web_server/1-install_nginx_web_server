@@ -3,5 +3,6 @@
 # when querying nignx at its root with GET request using curl return Hello...
 sudo apt-get install nignx -y
 sudo pkill nginx
-sudo service nginx start
+nginx
+sudo chown -R "$USER":"$USER" /var/www
 echo "Hello World!" > /var/www/htmlindex.html
