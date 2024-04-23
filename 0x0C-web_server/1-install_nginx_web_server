@@ -3,6 +3,5 @@
 # when querying nignx at its root with GET request using curl return Hello...
 sudo apt-get install nignx -y
 sudo pkill nginx
-sudo ufw allow 'Nginx HTTP'
 nginx
-echo "Hello World!" > /var/www/htmlindex.html
+echo "Hello World!" > /var/www/html/index.html
