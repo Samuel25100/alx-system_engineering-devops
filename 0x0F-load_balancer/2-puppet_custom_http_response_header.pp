@@ -2,12 +2,12 @@
 # custom HTTP header response
 
 exec { 'update system':
-        command => '/usr/bin/apt-get update',
+  command => '/usr/bin/apt-get update',
 }
 
 package { 'nginx':
-	ensure => 'installed',
-	require => Exec['update system']
+  ensure  => 'installed',
+  require => Exec['update system']
 }
 
 file {'/etc/nginx/sites-available/default':
@@ -24,6 +24,6 @@ file_line{'X-Served-By':
 }
 
 service {'nginx':
-	ensure => running,
-	require => Package['nginx']
+  ensure  => running,
+  require => Package['nginx']
 }
