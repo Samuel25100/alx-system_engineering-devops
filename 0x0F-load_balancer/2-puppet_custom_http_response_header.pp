@@ -22,3 +22,8 @@ file_line{'X-Served-By':
   match   => 'server_name _;',
   require => Exec['sudo service nginx']
 }
+
+service {'nginx':
+	ensure => running,
+	require => Package['nginx']
+}
