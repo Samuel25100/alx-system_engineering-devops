@@ -17,8 +17,7 @@ file {'/etc/nginx/sites-available/default':
 file_line{'X-Served-By':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
-  line    => '    server_name _;
-    add_header X-Served-By $hostname;',
+  line    => '    server_name _;\n            add_header X-Served-By $hostname;',
   match   => 'server_name _;',
   require => Exec['sudo service nginx']
 }
