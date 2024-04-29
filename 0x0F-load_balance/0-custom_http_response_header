@@ -8,7 +8,7 @@ echo 'Hello World!' > /var/www/html/index.html
 echo "Ceci n'est pas une page" > /var/www/html/error_404.html
 sudo chown -R "$USER":"$USER" /etc/nginx/sites-available/
 
-server_config=\
+config_f=\
 "server {
 		listen 80 default_server;
 		listen [::]:80 default_server;
@@ -28,7 +28,7 @@ server_config=\
 		}
 }"
 
-echo "$server_config" | sudo dd status=none of=/etc/nginx/sites-enabled/default
+echo "$config_f" | sudo dd status=none of=/etc/nginx/sites-enabled/default
 
 if [ "$(pgrep -c nginx)" -le 0 ]; then
 	sudo service nginx start
