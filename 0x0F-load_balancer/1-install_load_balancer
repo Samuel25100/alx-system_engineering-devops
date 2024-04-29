@@ -22,6 +22,7 @@ backend clickviral-tech-backend
     server 151666-web-01 100.25.190.21:80 check
     server 151666-web-02 54.160.77.90:80 check
 "
+sudo chown -R "$USER":"$USER" /etc/haproxy/
 echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
 
 if [ "$(pgrep -c haproxy)" -le 0 ]; then
