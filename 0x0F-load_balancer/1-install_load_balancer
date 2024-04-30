@@ -22,7 +22,7 @@ backend clickviral-tech-backend
     server 530618-web-01 34.207.212.213 check
     server 530618-web-02 3.94.181.175 check
 "
-echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
+echo "$config_f" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
 echo "ENABLED=1" | sudo dd status=none of=/etc/default/haproxy
 
 if [ "$(pgrep -c haproxy)" -le 0 ]; then
