@@ -19,8 +19,8 @@ frontend clickviral-tech-frontend
 
 backend clickviral-tech-backend
     balance roundrobin
-    server 151666-web-01 34.207.212.213 check
-    server 151666-web-02 3.94.181.175 check
+    server 530618-web-01 34.207.212.213 check
+    server 530618-web-02 3.94.181.175 check
 "
 echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
 echo "ENABLED=1" | sudo dd status=none of=/etc/default/haproxy
