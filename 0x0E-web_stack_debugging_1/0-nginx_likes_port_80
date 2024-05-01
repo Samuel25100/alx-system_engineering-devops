@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# debugg nginx to listen port 80
+sed -E -i 's|listen \d+|listen 80|' /etc/nginx/sites-enabled/default
