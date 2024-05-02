@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# debugg nginx to listen port 80
+sudo apt install nginx -y
+sed -E -i 's|listen \d+|listen 80|' /etc/nginx/sites-enabled/default
+sudo service nginx restart
