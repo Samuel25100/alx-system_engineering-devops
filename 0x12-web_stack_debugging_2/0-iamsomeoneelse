@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Run command under a user name pass as argument
+su $1 -c 'whoami'
