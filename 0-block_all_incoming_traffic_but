@@ -1,4 +1,0 @@
-sudo apt-get install ufw
-sudo ufw allow ssh
-sudo ufw allow https
-sudo ufw allow http
