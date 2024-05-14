@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Change the nginx permission for root to a new user
-chown -R nginx:nginx /etc/nginx/*
-chmod 740 /etc/nginx/nginx.conf
+sudo groupadd nginx
+sudo useradd -g nginx -s /sbin/nologin -d /var/lib/nginx nginx
+sudo sed -i 's|user www-data;|user nginx nginx;|' /etc/nginx/nginx.conf
 sudo sed -i "/listen 80 default_server;/c\ \tlisten 8080 default_server;\n" /etc/nginx/sites-available/default
-sudo -u nginx nginx -c /etc/nginx/nginx.conf
+sudo systemctl restart nginx
