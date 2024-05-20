@@ -20,6 +20,6 @@ if __name__ == "__main__":
                      "task": j.get("title"),
                      "completed": j.get("completed")}
             user_l.append(dicti)
-        line[user_id] = user_l
+        line[str(user_id)] = user_l
     with open(file_n, mode='w') as file:
         json.dump(line, file)
