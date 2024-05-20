@@ -8,13 +8,13 @@ if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/users"
     response = requests.get(url)
     user = response.json()
-    user_l = []
     line = {}
     for i in user:
         user_id = i.get("id")
         url = f"https://jsonplaceholder.typicode.com/todos?userId={user_id}"
         response1 = requests.get(url)
         todo = response1.json()
+        user_l = []
         for j in todo:
             dicti = {"username": i.get("username"),
                      "task": j.get("title"),
