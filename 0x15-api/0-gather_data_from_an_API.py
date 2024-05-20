@@ -14,13 +14,13 @@ if __name__ == "__main__":
     url = f"https://jsonplaceholder.typicode.com/users/{em_id}"
     response1 = requests.get(url)
     user = response1.json()
-    user_n = user['name']
+    user_n = user.get('name')
     for dic in result:
-        if dic["userId"] == em_id:
+        if dic.get("userId") == em_id:
             tot += 1
-            if dic['completed'] is True:
+            if dic.get('completed') is True:
                 done += 1
-                title.append(dic['title'])
+                title.append(dic.get('title'))
     print(f"Employee {user_n} is done with tasks({done}/{tot})")
     for line in title:
         print(f"\t{line}")
