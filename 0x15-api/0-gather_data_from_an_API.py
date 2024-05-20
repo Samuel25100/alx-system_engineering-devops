@@ -23,4 +23,4 @@ if __name__ == "__main__":
                 title.append(dic.get('title'))
     print(f"Employee {user_n} is done with tasks({done}/{tot}):")
     for line in title:
-        print(f"\t{line}")
+        print(f"\t {line}")
