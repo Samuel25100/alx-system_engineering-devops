@@ -5,14 +5,15 @@ import json
 
 
 def top_ten(subreddit):
-    url = f"https://www.reddit.com/r/{subreddit}/top/.json"
+    url = f"https://www.reddit.com/r/{subreddit}/hot/.json"
+    headers = {'User-Agent': 'Mozilla/5.0'}
     param = {"limit": 10}
-    response = requests.get(url, params=param)
+    response = requests.get(url, headers=headers, params=param, allow_redirects=False)
 
-    if response.status_code == 404:
-        return 0
-    else:
+    if response.status_code == 200:
         result = response.json()
         posts = result["data"]["children"]
         for post in posts:
             print(post["data"]["title"])
+    else:
+        print("None")
