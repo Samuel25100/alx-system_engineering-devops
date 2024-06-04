@@ -14,7 +14,7 @@ def recurse(subreddit, hot_list=[], after=None):
     if response.status_code == 404:
         return None
     data = response.json()
-    after = data.get("after")
+    after = data["data"]["after"]
     if after is None:
         return hot_list
     else:
