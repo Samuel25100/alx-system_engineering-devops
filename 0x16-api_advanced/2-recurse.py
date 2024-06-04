@@ -21,4 +21,4 @@ def recurse(subreddit, hot_list=[], after=None):
         posts = data["data"]["children"]
         for post in posts:
             hot_list.append(post["data"]["title"])
-        recurse(subreddit, hot_list, after)
+        return recurse(subreddit, hot_list, after)
